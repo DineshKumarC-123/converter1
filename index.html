@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <style>
+        body{
+            background-image: url('image/images.jpg');
+            background-size: cover;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid bg-light opacity-75 w-75 position-absolute top-50 start-50 translate-middle " style="height: 240px; border-radius: 8px;">
+        <div class="position-absolute top-50 start-50 translate-middle ">
+            <label for="cm">Centimeter:</label>
+            <div class="d-lg-flex d-none">
+            <input class="form-control"  type="number" id="cm" placeholder="Enter value in cm">          
+            <button onclick="convertCmToInch()" class="btn btn-primary ms-3 ">Convert</button>
+            </div>
+            <div class="d-lg-none d-block">
+            <input class="form-control"  type="number" id="cm" placeholder="Enter value in cm">          
+            <button onclick="convertCmToInch()" class="btn btn-primary ms-3 mt-3">Convert</button>
+            </div>
+            <p class="my-3">Inches:<span id="inch" class="bg-light px-1 ms-1 text-danger"></span></p>
+            <div class="px-auto">
+                 <a class="btn btn-outline-primary" href="inchtocm.html">INCH to CM <span style='font-size:20px;'>&#8594;</span></a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function convertCmToInch(){
+        let cmValue=document.getElementById("cm").value;
+        const inchValue=cmValue/2.54;
+        document.getElementById("inch").textContent=inchValue.toFixed(2);
+    }
+</script>
+</html>
+
+
+
+
+
+
+
